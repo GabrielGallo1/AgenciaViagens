@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import styles from './header.module.css'
 import logo from '../imagens/imagem (7).jfif'
 import lupa from '../imagens/lupa.png'
@@ -12,23 +13,23 @@ function Header() {
             <nav className={styles.nav_link}>
             <ul>
                 <li>
-                    <a href="">Home</a>
+                    <Link to='/' ><a>Home</a> </Link>
                 </li>
 
                 <li>
-                    <a href="">Escócia</a>
+                   <Link to='/Escocia' ><a>Escócia</a> </Link> {/* to='/Escocia é como chamar o elemento */}
                 </li>
 
                 <li>
-                    <a href="">Grand Canyon</a>
+                    <Link to='/GrandCanyon' ><a>Grand Canyon</a> </Link>
                 </li>
 
                 <li>
-                    <a href="">Muralhas da China</a>
+                    <Link to='/Muralha_China' ><a>Muralhas da China</a> </Link>
                 </li>
 
                 <li>
-                    <a href="">Aruba</a>
+                    <Link to='/Aruba' ><a>Aruba</a> </Link>
                 </li>
                 
 

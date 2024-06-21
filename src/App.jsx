@@ -1,3 +1,5 @@
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+
 import './App.css'
 import Header from './assets/Components/header.jsx'
 import Escocia from './assets/Components/Escocia.jsx'
@@ -11,14 +13,18 @@ function App() {
 
   return (
     <>
+    <Router>
       <Header/>
-      <Home/>
-      <Escocia/>
-      <GrandCanyon/>
-      <Muralhas_China/>
-      <Aruba/>
-      <Katimandu/>
+      <Routes>
+        <Route path='/' element= {<Home/>} /> {/* a '/' representa o primeiro elemento */}
+        <Route path='/Escocia' element={<Escocia/>} />
+        <Route path='//GrandCanyon' element={<GrandCanyon/>} />
+        <Route path='/Muralha_China' element={<Muralhas_China/>} />
+        <Route path='/Aruba' element={<Aruba/>} />
+        <Route path='/Katimandu' element={<Katimandu/>} />
+      </Routes>
       <Footer/>
+    </Router>
     </>
   )
 }
